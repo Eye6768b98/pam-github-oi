@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About • Butterfly & Brush</title>
+
+  <style>
+    /* Fantasy Background */
+    body {
+      background: url("fantasy-forest.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      color: #D4AF37;
+    }
+<body>/* Wolf silhouette blended into background */
+.wolf-bg {
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 40vw;
+  opacity: 0.18;
+  filter: blur(1px) brightness(0.7);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Witch silhouette blended into background */
+.witch-bg {
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  width: 35vw;
+  opacity: 0.15;
+  filter: blur(1px) brightness(0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
+    /* Dark overlay */<img src="wolf-silhouette.png" class="wolf-bg" alt=""> <img src="witch-silhouette.png" class="witch-bg" alt="">
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 7, 7, 0.92);
+      z-index: -1;
+    }
+
+    nav {
+      background: #000;
+      padding: 15px;
+    }
+
+    nav a {
+      color: #D4AF37;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .logo {
+      width: 140px;
+      margin-top: 20px;
+    }
+
+    /* Banner with shimmering gold glow */
+    .banner {
+      padding: 40px 0;
+      background: #060606;
+      margin-bottom: 20px;
+      border: 3px solid rgba(212, 175, 55, 0.8);
+      border-radius: 12px;
+      box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.7),
+        0 0 30px rgba(212, 175, 55, 0.5),
+        0 0 45px rgba(212, 175, 55, 0.3);
+      animation: shimmerGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmerGlow {
+      0% {
+        box-shadow:
+          0 0 10px rgba(212, 175, 55, 0.4),
+          0 0 20px rgba(212, 175, 55, 0.3),
+          0 0 30px rgba(212, 175, 55, 0.2);
+      }
+      50% {
+        box-shadow:
+          0 0 25px rgba(212, 175, 55, 0.9),
+          0 0 45px rgba(212, 175, 55, 0.7),
+          0 0 70px rgba(212, 175, 55, 0.5);
+      }
+      100% {
+        box-shadow:
+          0 0 10px rgba(212, 175, 55, 0.4),
+          0 0 20px rgba(212, 175, 55, 0.3),
+          0 0 30px rgba(212, 175, 55, 0.2);
+      }
+    }
+
+    .section {
+      max-width: 700px;
+      margin: auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: #d9940a;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 36px;
+      color: #D4AF37;
+    }
+
+    .linktree-container {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-btn {
+      display: block;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fcf8f8, #5a5d05);
+      color: #5d610a;
+      border: 2px solid #5f640b;
+      transition: 0.3s ease;
+    }
+
+    .link-btn:hover {
+      background: #51590e;
+      color: #565a25;
+      border-color: #fff;
+    }
+
+    footer {
+      padding: 20px;
+      color: #D4AF37;
+      margin-top: 40px;
+    }
+
+    /* Floating butterflies */
+    .butterfly {
+      position: fixed;
+      font-size: 32px;
+      pointer-events: none;
+      animation: fly 12s linear infinite;
+      opacity: 0.8;
+      z-index: 2;
+    }
+
+    .b1 { left: 5%; bottom: -50px; animation-duration: 14s; }
+    .b2 { left: 50%; bottom: -60px; animation-duration: 18s; }
+    .b3 { left: 80%; bottom: -40px; animation-duration: 16s; }
+
+    @keyframes fly {
+      0% { transform: translateY(0) translateX(0) rotate(0deg); }
+      25% { transform: translateY(-200px) translateX(-30px) rotate(10deg); }
+      50% { transform: translateY(-400px) translateX(20px) rotate(-10deg); }
+      75% { transform: translateY(-600px) translateX(-20px) rotate(5deg); }
+      100% { transform: translateY(-800px) translateX(0) rotate(0deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Butterflies -->
+  <div class="butterfly b1">🦋</div>
+  <div class="butterfly b2">🦋</div>
+  <div class="butterfly b3">🦋</div>
+
+  <img src="butterfly-logo.svg" alt="Butterfly & Brush Logo" class="logo">
+
+  <div class="banner">
+    <h1>Butterfly & Brush</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>About Me</h1>
+
+  <div class="section">
+    <p>
+      Butterfly & Brush was born from a love of transformation, creativity, and the beauty
+      found in handmade art. Each piece reflects a moment of inspiration, a story, or a
+      connection to nature.
+    </p>
+
+    <p>
+      My goal is to create art that brings joy, comfort, and meaning — whether through
+      vibrant colors, delicate textures, or symbolic themes of growth and renewal.
+    </p>
+  </div>
+
+  <div class="section">
+    <h1>My Links</h1>
+
+    <div class="linktree-container">
+      <a class="link-btn" href="https://linktr.ee/pam883" target="_blank">Linktree</a>
+      <a class="link-btn" href="https://www.pinterest.com/pamelamooney88/" target="_blank">Pinterest</a>
+      <a class="link-btn" href="https://www.tiktok.com/@pamm3340" target="_blank">TikTok</a>
+      <a class="link-btn" href="https://www.arthelper.com/pamelamooney88" target="_blank">ArtHelper</a>
+      <a class="link-btn" href="https://yourwebsite.com" target="_blank">Official Website</a>
+      <a class="link-btn" href="mailto:you@email.com">Email Me</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Butterfly & Brush
+  </footer>
+
+</body>
+</html>
+
